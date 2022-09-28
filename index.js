@@ -1,3 +1,4 @@
+module.exports = Phrase;
 
 // Adds `reverse` to all strings.
 String.prototype.reverse = function() {
@@ -7,19 +8,19 @@ String.prototype.reverse = function() {
 
 // EXERCISE: Add a blank method to the String object prototype that returns true
 // if the string is empty or consists solely of whitespace (spaces, tabs, or newlines)
-String.prototype.blank = function () {
-  test = /^$/g;
-  test2 = /\s/g;
-  result = false;
-  if (!!this.match(test) || !!this.match(test2)) {
-    result = true;
-  }
-  return result;
-}
+// String.prototype.blank = function () {
+//   test = /^$/g;
+//   test2 = /\s/g;
+//   result = false;
+//   if (!!this.match(test) || !!this.match(test2)) {
+//     result = true;
+//   }
+//   return result;
+// }
 
-Array.prototype.last = function () {
-  return this.slice(this.length - 1); 
-}
+// Array.prototype.last = function () {
+//   return this.slice(this.length - 1);
+// }
 
 // Returns true for a palindrome, false otherwise.
 // function palindrome(string) {

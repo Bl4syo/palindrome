@@ -32,15 +32,25 @@ String.prototype.reverse = function() {
 function Phrase(content) {
   this.content = content;
 
-  // Makes the phrase LOUDER.
+  // Returns the letters in the content.
+  // For example:
+  //   new Phrase("Hello, world!").letters() === "Helloworld"
+  this.letters = function letters() {
+    return Array.from(this.content).filter(c => c.match(/[a-z]/i)).join("");
+  }
+  // Semplification of the abovr using the .match string method
+  //     return (this.content.match(/[a-z]/gi) || []).join("");
+
+
+  // EXERCISE: Makes the phrase LOUDER.
   this.louder = function() {
     let loud = this.content.toUpperCase();
     return loud;
   };
 
   // EXERCISE: processor method to return content in lower case
-  this.processor = function(string) {
-    return string.toLowerCase();
+  this.processor = function() {
+    return this.letters().toLowerCase();
   }
 
   // Returns content processed for palindrome testing.
